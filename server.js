@@ -19,7 +19,7 @@ const ENV = 'STG';
 const app = express();
 app.get('/', (req, res) => {
   res.statusCode = 200;
-  const msg = 'Konveyor test application pushed through GITHUB actions CI!';
+  const msg = 'Konveyor test application pushed through GITHUB actions CI/CD!';
   res.send(getPage(msg));
 });
 
