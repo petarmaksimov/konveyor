@@ -12,20 +12,20 @@ const express = require('express');
 const PORT = 8080;
 const HOST = '0.0.0.0';
 const OS = require('os');
-const ENV = 'STAGE';
+const ENV = 'Production';
 
 
 // App
 const app = express();
 app.get('/', (req, res) => {
   res.statusCode = 200;
-  const msg = 'Primus Learning is your institution of choice, reach out to us at contact@primuslearning.org for all devops and aws training!';
+  const msg = 'Konveyor test application pushed through GITHUB actions pipeline!';
   res.send(getPage(msg));
 });
 
 app.get('/test', (req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello from Primus Learning and from /test Node!';
+  const msg = 'Konveyor test application pushed through GITHUB actions pipeline!';
   res.send(getPage(msg));
 });
 
