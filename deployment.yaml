@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: konveyor
-          image: public.ecr.aws/j9n6h0j6/konveyor:latest
+          image: public.ecr.aws/j9n6h0j6/konveyor:$IMAGE_TAG
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
