@@ -49,4 +49,4 @@ jobs:
           service.yaml
         replacement-method: defined
       env:
-        IMAGE_TAG: ${{ github.sha }}
+        IMAGE_TAG: $(date +%s)
