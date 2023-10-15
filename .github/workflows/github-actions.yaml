@@ -33,7 +33,7 @@ jobs:
       env:
         REGISTRY: 046222885654.dkr.ecr.eu-central-1.amazonaws.com
         REPOSITORY: konveyor
-        IMAGE_TAG: ${{ github.sha }}
+        IMAGE_TAG: $(date +%s)
       run: |
         docker build -t $REGISTRY/$REPOSITORY:latest .
         docker push $REGISTRY/$REPOSITORY:latest
