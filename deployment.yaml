@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: konveyor
+  labels:
+    app: konveyor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: konveyor
+  template:
+    metadata:
+      labels:
+        app: konveyor
+    spec:
+      containers:
+        - name: konveyor
+          image: public.ecr.aws/j9n6h0j6/konveyor:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
